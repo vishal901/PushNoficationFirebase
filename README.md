@@ -30,11 +30,13 @@ See on demo code how to used....
  
 
    dependencies {
+   
        compile 'com.google.firebase:firebase-messaging:9.0.2'
+       
     }
 
 
-     //Bottom
+     //Add Bottom
      
      
   apply plugin: 'com.google.gms.google-services'
