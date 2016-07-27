@@ -46,6 +46,8 @@ public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
             public void onResponse(String response) {
 
                 MyApplication.getInstance().showLog("repose", response.toString());
+                
+                Toast.makeText(MyFirebaseInstanceIdService.this, "Show Notification", Toast.LENGTH_SHORT).show();
 
 //                try {
 //                    JSONObject jObj = new JSONObject(response);
@@ -68,6 +70,8 @@ public class MyFirebaseInstanceIdService extends FirebaseInstanceIdService {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Login Error: " + error.getMessage());
+                
+                Toast.makeText(MyFirebaseInstanceIdService.this, "No Internet Access", Toast.LENGTH_SHORT).show();
 
             }
         }) {
